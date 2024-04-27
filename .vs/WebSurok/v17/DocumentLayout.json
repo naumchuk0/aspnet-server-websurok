@@ -5,38 +5,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{9D14E188-DB36-4F08-B4C2-FD5111E1D983}|WebSurok\\WebSurok.csproj|c:\\users\\admin\\source\\repos\\websurok\\websurok\\controllers\\categoriescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9D14E188-DB36-4F08-B4C2-FD5111E1D983}|WebSurok\\WebSurok.csproj|solutionrelative:websurok\\controllers\\categoriescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9D14E188-DB36-4F08-B4C2-FD5111E1D983}|WebSurok\\WebSurok.csproj|c:\\users\\admin\\source\\repos\\websurok\\websurok\\models\\categories\\categorycreateviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9D14E188-DB36-4F08-B4C2-FD5111E1D983}|WebSurok\\WebSurok.csproj|solutionrelative:websurok\\models\\categories\\categorycreateviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9D14E188-DB36-4F08-B4C2-FD5111E1D983}|WebSurok\\WebSurok.csproj|c:\\users\\admin\\source\\repos\\websurok\\websurok\\models\\categories\\categoryeditviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9D14E188-DB36-4F08-B4C2-FD5111E1D983}|WebSurok\\WebSurok.csproj|solutionrelative:websurok\\models\\categories\\categoryeditviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9D14E188-DB36-4F08-B4C2-FD5111E1D983}|WebSurok\\WebSurok.csproj|c:\\users\\admin\\source\\repos\\websurok\\websurok\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9D14E188-DB36-4F08-B4C2-FD5111E1D983}|WebSurok\\WebSurok.csproj|solutionrelative:websurok\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9D14E188-DB36-4F08-B4C2-FD5111E1D983}|WebSurok\\WebSurok.csproj|c:\\users\\admin\\source\\repos\\websurok\\websurok\\data\\entities\\categoryentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9D14E188-DB36-4F08-B4C2-FD5111E1D983}|WebSurok\\WebSurok.csproj|solutionrelative:websurok\\data\\entities\\categoryentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9D14E188-DB36-4F08-B4C2-FD5111E1D983}|WebSurok\\WebSurok.csproj|c:\\users\\admin\\source\\repos\\websurok\\websurok\\websurok.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{9D14E188-DB36-4F08-B4C2-FD5111E1D983}|WebSurok\\WebSurok.csproj|solutionrelative:websurok\\websurok.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9D14E188-DB36-4F08-B4C2-FD5111E1D983}|WebSurok\\WebSurok.csproj|c:\\users\\admin\\source\\repos\\websurok\\websurok\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9D14E188-DB36-4F08-B4C2-FD5111E1D983}|WebSurok\\WebSurok.csproj|solutionrelative:websurok\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9D14E188-DB36-4F08-B4C2-FD5111E1D983}|WebSurok\\WebSurok.csproj|c:\\users\\admin\\source\\repos\\websurok\\websurok\\data\\seederdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9D14E188-DB36-4F08-B4C2-FD5111E1D983}|WebSurok\\WebSurok.csproj|solutionrelative:websurok\\data\\seederdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9D14E188-DB36-4F08-B4C2-FD5111E1D983}|WebSurok\\WebSurok.csproj|c:\\users\\admin\\source\\repos\\websurok\\websurok\\data\\myappcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9D14E188-DB36-4F08-B4C2-FD5111E1D983}|WebSurok\\WebSurok.csproj|solutionrelative:websurok\\data\\myappcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -46,32 +14,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "CategoryEditViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\WebSurok\\WebSurok\\Models\\Categories\\CategoryEditViewModel.cs",
-              "RelativeDocumentMoniker": "WebSurok\\Models\\Categories\\CategoryEditViewModel.cs",
-              "ToolTip": "C:\\Users\\Admin\\source\\repos\\WebSurok\\WebSurok\\Models\\Categories\\CategoryEditViewModel.cs",
-              "RelativeToolTip": "WebSurok\\Models\\Categories\\CategoryEditViewModel.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAAFAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-15T21:40:58.629Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "CategoryCreateViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\WebSurok\\WebSurok\\Models\\Categories\\CategoryCreateViewModel.cs",
-              "RelativeDocumentMoniker": "WebSurok\\Models\\Categories\\CategoryCreateViewModel.cs",
-              "ToolTip": "C:\\Users\\Admin\\source\\repos\\WebSurok\\WebSurok\\Models\\Categories\\CategoryCreateViewModel.cs",
-              "RelativeToolTip": "WebSurok\\Models\\Categories\\CategoryCreateViewModel.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAoAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-15T21:40:52.916Z"
-            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -80,82 +24,10 @@
               "RelativeDocumentMoniker": "WebSurok\\Controllers\\CategoriesController.cs",
               "ToolTip": "C:\\Users\\Admin\\source\\repos\\WebSurok\\WebSurok\\Controllers\\CategoriesController.cs",
               "RelativeToolTip": "WebSurok\\Controllers\\CategoriesController.cs",
-              "ViewState": "AQIAABkAAAAAAAAAAAAUwCQAAAAkAAAA",
+              "ViewState": "AQIAAE0AAAAAAAAAAAAiwFsAAAAvAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-14T14:19:00.187Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "CategoryEntity.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\WebSurok\\WebSurok\\Data\\Entities\\CategoryEntity.cs",
-              "RelativeDocumentMoniker": "WebSurok\\Data\\Entities\\CategoryEntity.cs",
-              "ToolTip": "C:\\Users\\Admin\\source\\repos\\WebSurok\\WebSurok\\Data\\Entities\\CategoryEntity.cs",
-              "RelativeToolTip": "WebSurok\\Data\\Entities\\CategoryEntity.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAVAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-14T14:12:56.627Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "WebSurok.csproj",
-              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\WebSurok\\WebSurok\\WebSurok.csproj",
-              "RelativeDocumentMoniker": "WebSurok\\WebSurok.csproj",
-              "ToolTip": "C:\\Users\\Admin\\source\\repos\\WebSurok\\WebSurok\\WebSurok.csproj",
-              "RelativeToolTip": "WebSurok\\WebSurok.csproj",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAABUAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-04-14T14:11:24.412Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "AccountController.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\WebSurok\\WebSurok\\Controllers\\AccountController.cs",
-              "RelativeDocumentMoniker": "WebSurok\\Controllers\\AccountController.cs",
-              "ToolTip": "C:\\Users\\Admin\\source\\repos\\WebSurok\\WebSurok\\Controllers\\AccountController.cs",
-              "RelativeToolTip": "WebSurok\\Controllers\\AccountController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAATAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-07T12:33:12.386Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "SeederDb.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\WebSurok\\WebSurok\\Data\\SeederDb.cs",
-              "RelativeDocumentMoniker": "WebSurok\\Data\\SeederDb.cs",
-              "ToolTip": "C:\\Users\\Admin\\source\\repos\\WebSurok\\WebSurok\\Data\\SeederDb.cs",
-              "RelativeToolTip": "WebSurok\\Data\\SeederDb.cs",
-              "ViewState": "AQIAABwAAAAAAAAAAAAQwCIAAAAVAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-07T11:26:28.715Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "MyAppContext.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\WebSurok\\WebSurok\\Data\\MyAppContext.cs",
-              "RelativeDocumentMoniker": "WebSurok\\Data\\MyAppContext.cs",
-              "ToolTip": "C:\\Users\\Admin\\source\\repos\\WebSurok\\WebSurok\\Data\\MyAppContext.cs",
-              "RelativeToolTip": "WebSurok\\Data\\MyAppContext.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-07T11:02:43.556Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\WebSurok\\WebSurok\\Program.cs",
-              "RelativeDocumentMoniker": "WebSurok\\Program.cs",
-              "ToolTip": "C:\\Users\\Admin\\source\\repos\\WebSurok\\WebSurok\\Program.cs",
-              "RelativeToolTip": "WebSurok\\Program.cs",
-              "ViewState": "AQIAACAAAAAAAAAAAAAiwCsAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-24T15:18:24.588Z"
             }
           ]
         }

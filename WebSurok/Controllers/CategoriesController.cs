@@ -86,9 +86,13 @@ namespace WebSurok.Controllers
                         Mode = ResizeMode.Max
                     });
                 });
-                string imageName = Path.GetRandomFileName() + ".webp";
+                var str = Path.Combine(Directory.GetCurrentDirectory(), "images", category.Image);
+                if (System.IO.File.Exists(str))
+                {
+                    System.IO.File.Delete(str);
+                }
+                string imageName = category.Image;
                 string dirSaveImage = Path.Combine(Directory.GetCurrentDirectory(), "images", imageName);
-
                 using var stream = System.IO.File.Create(dirSaveImage);
                 await image.SaveAsync(stream, new WebpEncoder());
                 category.Image = imageName;
@@ -101,9 +105,14 @@ namespace WebSurok.Controllers
         public IActionResult Delete(int id)
         {
             var category = _appContext.Categories.SingleOrDefault(x => x.Id == id);
+            var str = Path.Combine(Directory.GetCurrentDirectory(), "images", category.Image);
             if (category == null)
             {
                 return NotFound();
+            }
+            if (System.IO.File.Exists(str))
+            {
+                System.IO.File.Delete(str);
             }
             _appContext.Categories.Remove(category);
             _appContext.SaveChanges();

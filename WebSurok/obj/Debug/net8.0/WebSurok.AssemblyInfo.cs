@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("WebSurok")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+64c73b392bf713c162cf6ee1529b5b675ad1d510")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ebe3107eec79eafa69c83d90b132fc4e8235deda")]
 [assembly: System.Reflection.AssemblyProductAttribute("WebSurok")]
 [assembly: System.Reflection.AssemblyTitleAttribute("WebSurok")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
