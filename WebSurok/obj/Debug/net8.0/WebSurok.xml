@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>WebSurok</name>
+    </assembly>
+    <members>
+        <member name="T:WebSurok.Migrations.addDbTables">
+            <inheritdoc />
+        </member>
+        <member name="M:WebSurok.Migrations.addDbTables.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:WebSurok.Migrations.addDbTables.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:WebSurok.Migrations.addDbTables.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:WebSurok.Migrations.addcolimageintblCategories">
+            <inheritdoc />
+        </member>
+        <member name="M:WebSurok.Migrations.addcolimageintblCategories.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:WebSurok.Migrations.addcolimageintblCategories.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:WebSurok.Migrations.addcolimageintblCategories.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:WebSurok.Migrations.AdduserIdcoltblCategories">
+            <inheritdoc />
+        </member>
+        <member name="M:WebSurok.Migrations.AdduserIdcoltblCategories.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:WebSurok.Migrations.AdduserIdcoltblCategories.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:WebSurok.Migrations.AdduserIdcoltblCategories.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="P:WebSurok.Models.Account.LoginViewModel.Email">
+            <summary>
+            Логін користувача
+            </summary>
+            <example>admin@gmail.com</example>
+        </member>
+        <member name="P:WebSurok.Models.Account.LoginViewModel.Password">
+            <summary>
+            Логін користувача
+            </summary>
+            <example>123456</example>
+        </member>
+    </members>
+</doc>

@@ -1,37 +1,205 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿//using Microsoft.AspNetCore.Authorization;
+//using Microsoft.AspNetCore.Http;
+//using Microsoft.AspNetCore.Identity;
+//using Microsoft.AspNetCore.Mvc;
+//using SixLabors.ImageSharp;
+//using SixLabors.ImageSharp.Formats.Webp;
+//using SixLabors.ImageSharp.Processing;
+//using WebSurok.Data;
+//using WebSurok.Data.Entities;
+//using WebSurok.Data.Entities.Identity;
+//using WebSurok.Models.Categories;
+
+//namespace WebSurok.Controllers
+//{
+//    [Route("api/[controller]")]
+//    [ApiController]
+//    [Authorize]
+//    public class CategoriesController : ControllerBase
+//    {
+//        private readonly MyAppContext _appContext;
+//        private readonly UserManager<UserEntity> _userManager;
+
+//        public CategoriesController(MyAppContext appContext,
+//            UserManager<UserEntity> userManager)
+//        {
+//            _appContext = appContext;
+//            _userManager = userManager;
+//        }
+
+//        private async Task<UserEntity> GetUserAuthAsync()
+//        {
+//            var email = User.Claims.FirstOrDefault().Value;
+//            var user = await _userManager.FindByEmailAsync(email);
+//            return user;
+//        }
+
+//        [HttpGet]
+//        public IActionResult Get()
+//        {
+//            var user = GetUserAuthAsync();
+//            var list = _appContext.Categories
+//                .Where(u => u.UserId == user.Id)
+//                .ToList();
+//            return Ok(list);
+//        }
+//        [HttpPost]
+//        public async Task<IActionResult> Create([FromForm] CategoryCreateViewModel model)
+//        {
+//            var user = GetUserAuthAsync();
+//            var category = new CategoryEntity
+//            {
+//                Name = model.Name,
+//                Description = model.Description,
+//                UserId = user.Id,
+//            };
+
+//            if (model.Image != null)
+//            {
+//                using MemoryStream ms = new MemoryStream();
+//                await model.Image.CopyToAsync(ms);
+
+//                using Image image = Image.Load(ms.ToArray());
+
+//                image.Mutate(x =>
+//                {
+//                    x.Resize(new ResizeOptions
+//                    {
+//                        Size = new Size(1200),
+//                        Mode = ResizeMode.Max
+//                    });
+//                });
+//                string imageName = Path.GetRandomFileName() + ".webp";
+//                string dirSaveImage = Path.Combine(Directory.GetCurrentDirectory(), "images", imageName);
+
+//                using var stream = System.IO.File.Create(dirSaveImage);
+//                await image.SaveAsync(stream, new WebpEncoder());
+//                category.Image = imageName;
+//            }
+
+//            _appContext.Categories.Add(category);
+//            _appContext.SaveChanges();
+//            return Ok(category);
+//        }
+//        [HttpPut]
+//        public async Task<IActionResult> Edit([FromForm] CategoryEditViewModel model)
+//        {
+//            var category = _appContext.Categories.SingleOrDefault(x => x.Id == model.Id);
+//            if (category == null)
+//            {
+//                return NotFound();
+//            }
+//            category.Description = model.Description;
+//            category.Name = model.Name;
+//            if (model.Image != null)
+//            {
+//                using MemoryStream ms = new MemoryStream();
+//                await model.Image.CopyToAsync(ms);
+
+//                using Image image = Image.Load(ms.ToArray());
+
+//                image.Mutate(x =>
+//                {
+//                    x.Resize(new ResizeOptions
+//                    {
+//                        Size = new Size(1200),
+//                        Mode = ResizeMode.Max
+//                    });
+//                });
+//                var str = Path.Combine(Directory.GetCurrentDirectory(), "images", category.Image);
+//                if (System.IO.File.Exists(str))
+//                {
+//                    System.IO.File.Delete(str);
+//                }
+//                string imageName = category.Image;
+//                string dirSaveImage = Path.Combine(Directory.GetCurrentDirectory(), "images", imageName);
+//                using var stream = System.IO.File.Create(dirSaveImage);
+//                await image.SaveAsync(stream, new WebpEncoder());
+//                category.Image = imageName;
+//            }
+//            _appContext.SaveChanges();
+//            return Ok(category);
+//        }
+
+//        [HttpDelete("{id}")]
+//        public IActionResult Delete(int id)
+//        {
+//            var category = _appContext.Categories.SingleOrDefault(x => x.Id == id);
+//            var str = Path.Combine(Directory.GetCurrentDirectory(), "images", category.Image);
+//            if (category == null)
+//            {
+//                return NotFound();
+//            }
+//            if (System.IO.File.Exists(str))
+//            {
+//                System.IO.File.Delete(str);
+//            }
+//            _appContext.Categories.Remove(category);
+//            _appContext.SaveChanges();
+//            return Ok();
+//        }
+//    }
+//}
+
+using AutoMapper;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc;
 using SixLabors.ImageSharp;
 using SixLabors.ImageSharp.Formats.Webp;
 using SixLabors.ImageSharp.Processing;
-using WebSurok.Data.Entities;
 using WebSurok.Data;
+using WebSurok.Data.Entities;
+using WebSurok.Data.Entities.Identity;
 using WebSurok.Models.Categories;
 
 namespace WebSurok.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize]
     public class CategoriesController : ControllerBase
     {
         private readonly MyAppContext _appContext;
+        private readonly UserManager<UserEntity> _userManager;
+        private readonly IMapper _mapper;
 
-        public CategoriesController(MyAppContext appContext)
+        public CategoriesController(MyAppContext appContext,
+            UserManager<UserEntity> userManager,
+            IMapper mapper)
         {
             _appContext = appContext;
+            _userManager = userManager;
+            _mapper = mapper;
+        }
+
+        private async Task<UserEntity> GetUserAuthAsync()
+        {
+            var email = User.Claims.FirstOrDefault().Value;
+            var user = await _userManager.FindByEmailAsync(email);
+            return user;
         }
 
         [HttpGet]
-        public IActionResult Get()
+        public async Task<IActionResult> Get()
         {
-            var list = _appContext.Categories.ToList();
+            var user = await GetUserAuthAsync();
+            var list = _appContext.Categories
+                .Where(u => u.UserId == user.Id)
+                .Select(x => _mapper.Map<CategoryItemViewModel>(x))
+                .ToList();
             return Ok(list);
         }
         [HttpPost]
         public async Task<IActionResult> Create([FromForm] CategoryCreateViewModel model)
         {
+            var user = await GetUserAuthAsync();
             var category = new CategoryEntity
             {
                 Name = model.Name,
-                Description = model.Description
+                Description = model.Description,
+                UserId = user.Id,
             };
 
             if (model.Image != null)
@@ -59,25 +227,34 @@ namespace WebSurok.Controllers
 
             _appContext.Categories.Add(category);
             _appContext.SaveChanges();
-            return Ok(category);
+            return Ok(_mapper.Map<CategoryItemViewModel>(category));
         }
+
         [HttpPut]
         public async Task<IActionResult> Edit([FromForm] CategoryEditViewModel model)
         {
-            var category = _appContext.Categories.SingleOrDefault(x => x.Id == model.Id);
+            var user = await GetUserAuthAsync();
+            var category = _appContext.Categories
+                .Where(x => x.UserId == user.Id)
+                //.Select(x => _mapper.Map<CategoryItemViewModel>(x))
+                .SingleOrDefault(x => x.Id == model.Id);
             if (category == null)
             {
                 return NotFound();
             }
-            category.Description = model.Description;
-            category.Name = model.Name;
+
             if (model.Image != null)
             {
-                using MemoryStream ms = new MemoryStream();
-                await model.Image.CopyToAsync(ms);
-
-                using Image image = Image.Load(ms.ToArray());
-
+                string? imgDel = category.Image;
+                if (imgDel != null)
+                {
+                    string imgDelPath = Path.Combine(Directory.GetCurrentDirectory(), "images", imgDel);
+                    if (System.IO.File.Exists(imgDelPath))
+                    {
+                        System.IO.File.Delete(imgDelPath);
+                    }
+                }
+                using Image image = Image.Load(model.Image.OpenReadStream());
                 image.Mutate(x =>
                 {
                     x.Resize(new ResizeOptions
@@ -86,33 +263,44 @@ namespace WebSurok.Controllers
                         Mode = ResizeMode.Max
                     });
                 });
-                var str = Path.Combine(Directory.GetCurrentDirectory(), "images", category.Image);
-                if (System.IO.File.Exists(str))
-                {
-                    System.IO.File.Delete(str);
-                }
-                string imageName = category.Image;
+                string imageName = Path.GetRandomFileName() + ".webp";
                 string dirSaveImage = Path.Combine(Directory.GetCurrentDirectory(), "images", imageName);
-                using var stream = System.IO.File.Create(dirSaveImage);
-                await image.SaveAsync(stream, new WebpEncoder());
+
+                await image.SaveAsync(dirSaveImage, new WebpEncoder());
                 category.Image = imageName;
             }
+            category.Description = model.Description;
+            category.Name = model.Name;
             _appContext.SaveChanges();
-            return Ok(category);
+            return Ok(_mapper.Map<CategoryItemViewModel>(category));
         }
 
-        [HttpDelete("{id}")]
-        public IActionResult Delete(int id)
+        [HttpGet("{id}")]
+        public async Task<IActionResult> GetById(int id)
         {
-            var category = _appContext.Categories.SingleOrDefault(x => x.Id == id);
-            var str = Path.Combine(Directory.GetCurrentDirectory(), "images", category.Image);
+            var user = await GetUserAuthAsync();
+            var category = _appContext.Categories
+                .Where(x => x.UserId == user.Id)
+                .SingleOrDefault(x => x.Id == id);
+
             if (category == null)
             {
                 return NotFound();
             }
-            if (System.IO.File.Exists(str))
+
+            return Ok(_mapper.Map<CategoryItemViewModel>(category));
+        }
+
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> Delete(int id)
+        {
+            var user = await GetUserAuthAsync();
+            var category = _appContext.Categories
+                .Where(x => x.UserId == user.Id)
+                .SingleOrDefault(x => x.Id == id);
+            if (category == null)
             {
-                System.IO.File.Delete(str);
+                return NotFound();
             }
             _appContext.Categories.Remove(category);
             _appContext.SaveChanges();

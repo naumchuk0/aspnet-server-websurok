@@ -269,3 +269,9 @@ C:\Users\Admin\source\repos\WebSurok\WebSurok\bin\Debug\net8.0\System.IdentityMo
 C:\Users\Admin\source\repos\WebSurok\WebSurok\bin\Debug\net8.0\SixLabors.ImageSharp.dll
 C:\Users\Admin\source\repos\WebSurok\WebSurok\bin\Debug\net8.0\images\0nqt1xn5.h4z.webp
 C:\Users\Admin\source\repos\WebSurok\WebSurok\bin\Debug\net8.0\images\m5lyz521.zjg.webp
+C:\Users\Admin\source\repos\WebSurok\WebSurok\bin\Debug\net8.0\images\wallhaven-p8my3j_1920x1080.png
+C:\Users\Admin\source\repos\WebSurok\WebSurok\bin\Debug\net8.0\images\wallhaven-ymz3xg_1920x1080.png
+C:\Users\Admin\source\repos\WebSurok\WebSurok\bin\Debug\net8.0\WebSurok.xml
+C:\Users\Admin\source\repos\WebSurok\WebSurok\obj\Debug\net8.0\WebSurok.xml
+C:\Users\Admin\source\repos\WebSurok\WebSurok\bin\Debug\net8.0\AutoMapper.dll
+C:\Users\Admin\source\repos\WebSurok\WebSurok\bin\Debug\net8.0\images\n35kothk.hgx.webp
